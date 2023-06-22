@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
 * print_alphabet_x10 - function
 * Description: prints the lower case letters
