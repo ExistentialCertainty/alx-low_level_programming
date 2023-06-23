@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
+
 /**
 * _islower - function that checks for lower
 * case letters.
@@ -11,7 +12,7 @@
 
 int _islower(int c)
 {
-	if (c >= 97 && c <= 122)
+	if (c >= 65 && c <= 90)
 	{
 		return (1);
 	}
