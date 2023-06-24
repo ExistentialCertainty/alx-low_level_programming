@@ -6,7 +6,7 @@
  *Return: 0 for success.
  */
 
-int main()
+int main(void)
 {
 	char alpha = 'z';
 
