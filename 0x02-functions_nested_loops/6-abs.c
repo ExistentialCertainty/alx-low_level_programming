@@ -10,7 +10,14 @@
 
 int abs(int j)
 {
-	j = abs(j);
+	if (j >= 0)
+	{
+		putchar('0' + j);
+	}
+	else
+	{
+		putchar('0' + (-j));
+	}
 
 	return (0);
 }

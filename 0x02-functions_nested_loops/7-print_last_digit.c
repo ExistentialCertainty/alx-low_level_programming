@@ -6,13 +6,17 @@
 * @j: value to be checked
 * Description: checks the inputed value
 * and prints the last digit.
-* Return: y success
+* Return: 0 success
 */
 
 int print_last_digit(int j)
 {
-	j = abs(j) % 10;
-
-	putchar(j + '0');
-	return (j);
+	if (j >= 0)
+	{
+		putchar('0' + j % 10);
+	}else
+	{
+		putchar('0' + -j % 10);
+	}
+	return (0);
 }
