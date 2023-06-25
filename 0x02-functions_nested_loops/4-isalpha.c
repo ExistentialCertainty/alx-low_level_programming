@@ -2,19 +2,18 @@
 #include <ctype.h>
 
 /**
-* _islower - function that checks for lower
-* case letters.
-* @c: char to be checked.
-* Description: checks each inputed arguments
-* and prints 1 for lower case letters,
-* prints 0 otherwise
+* _isalpha - prototype
+* @c: argument to be checked
+* Description: function that checks for upper
+* and lowercase letters.
+* Return: 1 for true, 0 for false
 */
 
-int _islower(int c)
+int _isalpha(int c)
 {
-	if (c >= 65 && c <= 90)
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
-		return (1);
+	return (1);
 	}
 	return (0);
 }

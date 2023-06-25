@@ -7,6 +7,7 @@
 * Description: checks each inputed arguments
 * and prints 1 for lower case letters,
 * prints 0 otherwise
+* Return: 1 for true, 0 for false
 */
 
 int _islower(int c)
