@@ -13,14 +13,12 @@ void print_rev(char *str)
 	int i;
 	int count;
 
-	i = 0;
 	count = 0;
-	while (str[i] != '\0')
+	while (str[count] != '\0')
 	{
 		count++;
-		i++;
 	}
-	for (i = count - 1; str[i] >= 0; i--)
+	for (i = count - 1; i >= 0; i--)
 	{
 		putchar(str[i]);
 	}
