@@ -8,7 +8,7 @@
  * @argc: Counter for parameters recieved
  * @argv: String inputed into the fuction
  *
- * Return: Failure 1
+ * Return: Failure(1), Success(0)
  */
 int main(int argc, char *argv[])
 {
@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
 	else
 	{
 		printf("Error\n");
+		return (1);
 	}
-	return (1);
+	return (0);
 }
