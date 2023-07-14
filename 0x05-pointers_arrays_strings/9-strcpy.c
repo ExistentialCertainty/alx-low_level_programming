@@ -20,6 +20,5 @@ char *_strcpy(char *dest, char *src)
 		src++;
 	}
 	*dest_ptr = '\0';
-	putchar('\n');
 	return (dest);
 }
