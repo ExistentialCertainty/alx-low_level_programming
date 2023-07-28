@@ -10,19 +10,19 @@
 */
 int print_sign(int n)
 {
-	int pos = 1;
-	int zer = 0;
-	int neg = -1;
-
-	if (n > 0)
+	if (n > 48)
 	{
-		putchar('+');
-		return (pos);
-	} else if (n == 0)
-	{
-		putchar('0');
-		return (zer);
+		putchar(43);
+		return (1);
 	}
-	putchar('-');
-	return (neg);
+	if (n == 0)
+	{
+		putchar(48);
+		return (0);
+	}
+	if (n < 48)
+	{
+		putchar(45);
+	return (-1);
+	}
 }
