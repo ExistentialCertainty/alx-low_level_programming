@@ -8,15 +8,15 @@
 * Return: 0 success
 */
 
-int abs(int j)
+int abs(int n)
 {
-	if (j >= 0)
+	if (n >= 0)
 	{
-		putchar('0' + j);
+		putchar('0' + n);
 	}
 	else
 	{
-		putchar('0' + (-j));
+		putchar('0' + (-n));
 	}
 
 	return (0);
