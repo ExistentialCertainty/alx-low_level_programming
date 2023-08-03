@@ -14,7 +14,7 @@
 int _sqrt_helper(int n, int min, int max)
 {
 	int mid;
-	int square;
+	unsigned int square;
 
 	if (min > max)
 	{
