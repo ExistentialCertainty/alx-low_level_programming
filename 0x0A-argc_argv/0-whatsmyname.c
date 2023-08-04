@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
+
 
 /**
  * main -  a program that prints its name, followed
@@ -12,6 +13,6 @@
  */
 int main(int __attribute__((unused)) argc, char *argv[])
 {
-	printf("%s \n", argv[0]);
+	printf("%s\n", *argv);
 	return (0);
 }
