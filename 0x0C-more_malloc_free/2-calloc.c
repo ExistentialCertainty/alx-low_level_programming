@@ -19,18 +19,19 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	buffer = malloc(nmemb * size + 1);
+	buffer = malloc(nmemb * size);
 	if (buffer == NULL)
 	{
 		return (NULL);
 	}
 	i = 0;
 	buff = (char *)buffer;
-	while (i <= (nmemb * size))
+	while (i < (nmemb * size))
 	{
 		buff[i] = 0;
 		i++;
 	}
+	buff[i] = '\0';
 	return (buffer);
 }
 
