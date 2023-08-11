@@ -24,14 +24,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	i = 0;
 	buff = (char *)buffer;
-	while (i < (nmemb * size))
+	for (i = 0; i < nmemb * size; i++)
 	{
 		buff[i] = 0;
-		i++;
 	}
-	buff[i] = '\0';
 	return (buffer);
 }
 
