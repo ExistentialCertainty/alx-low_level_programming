@@ -22,7 +22,7 @@ int create_file(const char *filename, char *text_content)
 			len++;
 		}
 	}
-	filedesc = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	filedesc = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	roll = write(filedesc, text_content, len);
 
 	if (filedesc == -1 || roll == -1)
