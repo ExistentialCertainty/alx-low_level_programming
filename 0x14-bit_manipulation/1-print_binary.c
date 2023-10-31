@@ -1,33 +1,50 @@
 #include "main.h"
 
 /**
- * binary_to_uint - function converts a binary number to an unsigned int.
- * @b: pointer to a string containing a binary number
+ * _pow - func calculates (base ^ power)
+ * @base: base of the exponent
+ * @power: power of the exponent
  *
- * Return: unsigned int with decimal value of binsry number, or 0 if error
+ * Return: value of (base ^ power)
  */
-unsigned int binary_to_uint(const char *b)
+unsigned long int _pow(unsigned int base, unsigned int power)
 {
-	int count;
-	unsigned int denary;
+	unsigned long int binary;
+	unsigned int a;
 
-	denary = 0;
-	if (b == NULL)
+	binary = 1;
+	for (a = 1; a <= power; a++)
 	{
-		return (0);
+		binary *= base;
 	}
-	for (count = 0; b[count] != '\0'; a++)
+	return (binary);
+}
+
+/**
+ * print_binary - prints a number in binary notation
+ * @n: number to print
+ *
+ * Return: void
+ */
+void print_binary(unsigned long int n)
+{
+	unsigned long int divisor, check;
+	char flag;
+
+	flag = 0;
+	divisor = _pow(2, sizeof(unsigned long int) * 8 - 1);
+	while (divisor != 0)
 	{
-		if (b[count] != '0' && b[count] != '1')
+		check = n & divisor;
+		if (check == divisor)
 		{
-			return (0);
+			flag = 1;
+			_putchar('1');
 		}
+		else if (flag == 1 || divisor == 1)
+		{
+			_putchar('0');
+		}
+		divisor >>= 1;
 	}
-	for (count = 0; b[count] != '\0'; a++)
-	{
-		denary <<= 1;
-		if (b[count] == '1')
-			denary += 1;
-	}
-	return (denary);
 }
