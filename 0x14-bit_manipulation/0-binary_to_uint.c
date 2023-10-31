@@ -12,18 +12,18 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int denary;
 
 	denary = 0;
-	if (b == NULL)
+	if (!b)
 	{
 		return (0);
 	}
-	for (count = 0; b[count] != '\0'; a++)
+	for (count = 0; b[count] != '\0'; count++)
 	{
 		if (b[count] != '0' && b[count] != '1')
 		{
 			return (0);
 		}
 	}
-	for (count = 0; b[count] != '\0'; a++)
+	for (count = 0; b[count] != '\0'; count++)
 	{
 		denary <<= 1;
 		if (b[count] == '1')
