@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include "main.h"
 /**
@@ -17,16 +16,15 @@ int append_text_to_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
-
-	if (text_content != NULL)
+	filedesc = open(filename, O_WRONLY | O_APPEND);
+	if (text_content)
 	{
 		for (len = 0; text_content[len];)
 		{
 			len++;
 		}
+		roll = write(filedesc, text_content, len);
 	}
-	filedesc = open(filename, O_WRONLY | O_APPEND);
-	roll = write(filedesc, text_content, len);
 	if (filedesc == -1 || roll == -1)
 	{
 		return (-1);
